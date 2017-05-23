@@ -14,10 +14,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'haml-rails', '~> 0.9'
+gem 'therubyracer'
+gem 'devise'
 gem 'omniauth'
-gem 'omniauth-identity'
-# gem 'omniauth-facebook'
-# gem "omniauth-google-oauth2"
+gem "omniauth-google-oauth2"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
