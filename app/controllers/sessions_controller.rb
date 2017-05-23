@@ -1,9 +1,11 @@
 class SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: :create
+
   def new
   end
 
   def create
-    user = User.from_omniauth(env["omniauth.auth"])
+    user = User.from_omniauth(ENV["omniauth.auth"])
     session[:user_id] = user.id
     redirect_to root_url, notice: "Sucessfully signed in."
   end

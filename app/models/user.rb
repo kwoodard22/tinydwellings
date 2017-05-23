@@ -9,4 +9,5 @@ class User < ApplicationRecord
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
     end
+  end
 end
